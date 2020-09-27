@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="supaPigApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8"/>
+<title>SupaPig</title>
+ <link rel="stylesheet" type="text/css" href="SupaPig.css" />
+ <script type="text/javascript" src="./js/angular.min.js"></script>
+<script type="text/javascript" src="./js/supaPigController.js"> </script>
+<script type="text/javascript" src="./js/pigs.js"> </script>
+<script type="text/javascript" src="./js/phaser.min.js"> </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+
+
+</head>
+<body   ng-controller="supaPigControler" ng-init="init()">
+<div id="header" >
+	<h1>SupaPig</h1><br/>
+</div>
+<div id="leftScoreBoard">
+		<h2>Highest Score: </h2>
+<br>	<h2 id="score">{{highestScore}}</h2>
+	</div>
+<div id="content">  
+	
+ <canvas id="gameCanvas" tabindex="1" width="{{width}}" height="{{height}}"></canvas>
+<br/> <br/>
+<h2>{{gameTitle}}</h2>
+<p>{{gameInstructions}}</p>
+<br/>
+<br/>
+<h2 id="controlsHeader">Controls</h2>
+
+<p>Simply tap the spacebar button or use the left-click button on your mouse to control character.</p>
+</div>  
+
+</body>
+</html>
