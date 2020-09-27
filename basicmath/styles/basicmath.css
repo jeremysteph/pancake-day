@@ -1,0 +1,89 @@
+html {
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 100%;
+}
+/* See https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+.lg { font-size: calc(4vw + 4vh + 3vmin); }
+
+h1 { font-size: 5.074em; }
+h2 { font-size: 4.728em; }
+h3 { font-size: 3.44em; }
+h4 { font-size: 2.2em; }
+main {
+    display: flex;
+    flex-direction: column;
+}
+.tile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+main section {
+    margin: auto;
+    text-align: center;
+}
+header > h1 {
+    margin: auto;
+    text-align: center;
+}
+header > div {
+    display: flex;
+    justify-content: space-around;
+}
+header img {
+    background-color: transparent;
+}
+.action {
+    width: 72px;
+    height: 72px;
+}
+.tooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+}
+
+.tooltip .top {
+    min-width:200px; 
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -100%);
+    padding:10px 20px;
+    color:#FFFFFF;
+    background-color:#0066FF;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+}
+
+.tooltip:hover .top {
+    display:block;
+}
+
+.tooltip .top i {
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+}
+
+.tooltip .top i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background-color:#0066FF;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
