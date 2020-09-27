@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <title>Assignment 1 - Jeremiah Stephens</title>
+  <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function() { // This event fires when a button is clicked
+   
+    $.ajax({ // ajax call starts
+      url: 'http://localhost:3000', // JQuery loads localhost:3000 server 
+      type:'get',
+      dataType: 'JSON', // Choosing a JSON datatype
+     success:function(msg){
+       console.log(msg);
+      $('#response').html(''); // Clear response div
+      document.getElementById('response').innerHTML = "Server Response: " +msg.message + "  Authenticated: " +msg.authenticated;
+
+     }
+    })
+
+});
+    return false; // keeps the page from not refreshing 
+  });
+
+</script>
+ </head>
+<p>
+      Create an HTML page that uses Ajax (Fetch, Axios, jQuery) 
+      that will use the code I have included to start off, and show it in the page after the user clicks a button.  
+</p>
+  
+  <div id="response"></div>
+  <button type="button" >Get Messege</button>
+
+</html>
