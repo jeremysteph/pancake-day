@@ -1,0 +1,11 @@
+Hello ###1## ###name###
+
+So ###2### you are wondering where your money went.
+We at Fourteenth National Bank now offer you, ###1###
+###3### a special service for our best customers.
+For $29.95 a month, we will track all you're account
+balances. Just send us all your account infomation,
+you're social security number, and your mother's
+maiden name and we will keep ###0### ###3###'s money safe.
+
+We look forward to yore business.
